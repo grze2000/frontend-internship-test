@@ -17,18 +17,18 @@
     <div class="popup">
       <div class="popup__content-wrapper">
         <h2 class="popup__title">Login</h2>
-        <form action="" class="form">
+        <form action="" class="form" id="login-form" novalidate>
           <div class="form__form-group">
-            <input type="email" id="email" placeholder="E-mail" class="form__textfield" required>
+            <input type="email" name="email" placeholder="E-mail" class="form__textfield">
             <label for="email"></label>
           </div>
           <div class="form__form-group">
-            <input type="password" id="password" placeholder="Password" class="form__textfield" required>
+            <input type="password" name="password" placeholder="Password" class="form__textfield">
             <label for="password"></label>
           </div>
           <div class="form__form-group">
             <label for="rules-checkbox" class="form__checkbox-container">I agree to terms & conditions.
-              <input type="checkbox" id="rules-checkbox" class="form__checkbox" required>
+              <input type="checkbox" name="rules-checkbox" id="rules-checkbox" class="form__checkbox">
               <span class="form__checkmark"></span>
             </label>
           </div>
