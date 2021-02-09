@@ -77,5 +77,10 @@
     &:hover {
       background-color: $secondary-color;
     }
+
+    &:disabled {
+      background-color: $grey;
+      cursor: default;
+    }
   }
 }

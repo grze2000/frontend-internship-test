@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const popup = document.querySelector('.popup');
     const closeBtn = document.querySelector('.popup__close-btn');
     const form = document.querySelector('#login-form');
+    const message = document.querySelector('.message');
 
     showPopupBtn.addEventListener('click', function() {
         popup.classList.add('popup--open');
@@ -40,7 +41,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         e.preventDefault();
         validateForm(form);
         if(form.checkValidity()) {
+            form.submit.disabled = true;
             console.log(`Email: ${form.email.value}, Password: ${form.password.value}`);
+            setTimeout(() => {
+                showPopupBtn.classList.add('hide');
+                message.classList.remove('hide');
+                popup.classList.remove('popup--open');
+            }, 3000);
         }
     });
 });
